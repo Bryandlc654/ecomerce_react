@@ -42,9 +42,11 @@ const ShoppingList = () => {
   );
 
   return (
+    
     <Box width="80%" margin="80px auto">
+      
       <Typography variant="h3" textAlign="center">
-        NUSTROS <b>PRODUCTOS</b>
+         <b>NUESTROS PRODUCTOS</b>
       </Typography>
       <Tabs
         textColor="primary"

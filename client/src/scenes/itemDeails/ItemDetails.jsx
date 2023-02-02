@@ -10,6 +10,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import { shades } from "../../theme";
 import { addToCart } from "../../state";
 import { useDispatch } from "react-redux";
+import ImgDelivery from "../../banners/boton_deliverygratis_desktop_liquidacion.png";
 
 const ItemDetails = () => {
   const dispatch = useDispatch();
@@ -72,8 +73,12 @@ const ItemDetails = () => {
           </Box>
 
           <Box m="65px 0 25px 0">
-            <Typography variant="h3">{item?.attributes?.name}</Typography>
-            <Typography>S/ {item?.attributes?.price}</Typography>
+            <Typography variant="h3" fontWeight="bold">
+              {item?.attributes?.name}
+            </Typography>
+            <Typography color="red" fontSize="20px">
+              S/ {item?.attributes?.price}
+            </Typography>
             <Typography sx={{ mt: "20px" }}>
               {item?.attributes?.longDescription}
             </Typography>
@@ -109,11 +114,11 @@ const ItemDetails = () => {
             </Button>
           </Box>
           <Box>
-            <Box m="20px 0 5px 0" display="flex">
+            <Box m="20px 0 20px 0" display="flex">
               <FavoriteBorderOutlinedIcon />
               <Typography sx={{ ml: "5px" }}>Añadir a Favoritos</Typography>
             </Box>
-            <Typography>CATEGORIA: {item?.attributes?.category}</Typography>
+            <img src={ImgDelivery} alt="" width="70%"/>
           </Box>
         </Box>
       </Box>
@@ -129,7 +134,16 @@ const ItemDetails = () => {
         {value === "description" && (
           <div>{item?.attributes?.longDescription}</div>
         )}
-        {value === "reviews" && <div>reviews</div>}
+        {value === "reviews" && (
+          <div>
+            Ofrecemos una experiencia de compra en línea fácil y sin
+            complicaciones, con opciones de envío rápido y seguro a cualquier
+            parte del mundo. Además, nuestro equipo de atención al cliente está
+            disponible las 24 horas para ayudarte con cualquier pregunta o
+            necesidad. No esperes más, visítanos y haz de tu guardarropa algo
+            especial. ¡Haz clic ahora para comprar!
+          </div>
+        )}
       </Box>
 
       {/* RELATED ITEMS */}
