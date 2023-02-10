@@ -6,9 +6,9 @@ const Confirmation = () => {
   return (
     <Box m="90px auto" width="80%" height="50vh">
       <Alert severity="success">
-        <AlertTitle>Success</AlertTitle>
-        You have successfully made an Order —{" "}
-        <strong>Congrats on Making your Purchase</strong>
+        <AlertTitle>Transacción completada</AlertTitle>
+        Ha realizado un pedido con éxito —{" "}
+        <strong>Felicidades por hacer tu compra</strong>
       </Alert>
     </Box>
   );

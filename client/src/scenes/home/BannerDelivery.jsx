@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import BannerProm1 from "../../banners/230118_cintillo_desktop_2.png";
+import BannerProm1 from "../../banners/banner_delivery.jpg";
 
 
 const BannerDelivery = () => {

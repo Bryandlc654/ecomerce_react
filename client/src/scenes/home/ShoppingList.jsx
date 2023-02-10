@@ -20,7 +20,7 @@ const ShoppingList = () => {
 
   async function getItems() {
     const items = await fetch(
-      "http://localhost:1337/api/items?populate=image",
+      "http://181.177.246.217:1337/api/items?populate=image",
       { method: "GET" }
     );
     const itemsJson = await items.json();
@@ -32,7 +32,7 @@ const ShoppingList = () => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const topRatedItems = items.filter(
-    (item) => item.attributes.category === "masValorados"
+    (item) => item.attributes.category === "electrodomesticos"
   );
   const newArrivalsItems = items.filter(
     (item) => item.attributes.category === "recienllegados"
@@ -65,7 +65,7 @@ const ShoppingList = () => {
         <Tab label="TODOS" value="all" />
         <Tab label="NUEVOS" value="newArrivals" />
         <Tab label="MAS VENDIDOS" value="bestSellers" />
-        <Tab label="MAS VALORADOS" value="topRated" />
+        <Tab label="ELECTRODOMÉSTICOS" value="topRated" />
       </Tabs>
       <Box
         margin="0 auto"

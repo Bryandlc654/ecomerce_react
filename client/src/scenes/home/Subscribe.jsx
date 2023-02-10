@@ -12,7 +12,7 @@ const Subscribe = () => {
       </IconButton>
       <Typography variant="h3">Subscribete a nuestro catálogo</Typography>
       <Typography>
-        y recibe un cupón con S/ 20 de descuento en tu prxima compra
+        y recibe un cupón con S/ 20 de descuento en tu próxima compra
       </Typography>
       <Box
         p="2px 4px"

@@ -26,7 +26,7 @@ const ItemDetails = () => {
 
   async function getItem() {
     const item = await fetch(
-      `http://localhost:1337/api/items/${itemId}?populate=image`,
+      `http://181.177.246.217:1337/api/items/${itemId}?populate=image`,
       {
         method: "GET",
       }
@@ -37,7 +37,7 @@ const ItemDetails = () => {
 
   async function getItems() {
     const items = await fetch(
-      `http://localhost:1337/api/items?populate=image`,
+      `http://181.177.246.217:1337/api/items?populate=image`,
       {
         method: "GET",
       }
@@ -52,7 +52,7 @@ const ItemDetails = () => {
   }, [itemId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <Box width="80%" m="80px auto">
+    <Box width="80%" m="180px auto">
       <Box display="flex" flexWrap="wrap" columnGap="40px">
         {/* IMAGES */}
         <Box flex="1 1 40%" mb="40px">
@@ -60,7 +60,7 @@ const ItemDetails = () => {
             alt={item?.name}
             width="100%"
             height="100%"
-            src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+            src={`http://181.177.246.217:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
             style={{ objectFit: "contain" }}
           />
         </Box>
@@ -102,7 +102,7 @@ const ItemDetails = () => {
             </Box>
             <Button
               sx={{
-                backgroundColor: "#222222",
+                backgroundColor: "#FF6200",
                 color: "white",
                 borderRadius: 0,
                 minWidth: "150px",
