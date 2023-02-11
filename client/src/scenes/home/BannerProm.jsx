@@ -6,8 +6,8 @@ import BannerProm2 from "../../banners/Huincha-buttonbanner-dk-casaAndina-0602-J
 const BannerProm = () => {
   return (
     <Box width="80%" margin="80px auto" alignItems="center" display="flex" flexDirection="column" gap="10px">
-      <img src={BannerProm1} alt="" width="100%" margin="10px 0"/>
-      <img src={BannerProm2} alt="" width="100%" margin="10px 0"/>
+      <img src={BannerProm1} alt="" width="100%" margin="10px 0" className="banner_prom"/>
+      <img src={BannerProm2} alt="" width="100%" margin="10px 0" className="banner_prom"/>
     </Box>
   );
 };

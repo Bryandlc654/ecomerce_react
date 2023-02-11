@@ -32,13 +32,13 @@ const ShoppingList = () => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const topRatedItems = items.filter(
-    (item) => item.attributes.category === "electrodomesticos"
+    (item) => item.attributes.category === "computo"
   );
   const newArrivalsItems = items.filter(
-    (item) => item.attributes.category === "recienllegados"
+    (item) => item.attributes.category === "celulares"
   );
   const bestSellersItems = items.filter(
-    (item) => item.attributes.category === "topVentas"
+    (item) => item.attributes.category === "electrodomesticos"
   );
 
   return (
@@ -63,9 +63,9 @@ const ShoppingList = () => {
         }}
       >
         <Tab label="TODOS" value="all" />
-        <Tab label="NUEVOS" value="newArrivals" />
-        <Tab label="MAS VENDIDOS" value="bestSellers" />
-        <Tab label="ELECTRODOMÉSTICOS" value="topRated" />
+        <Tab label="CELULARES" value="newArrivals" />
+        <Tab label="ELECTRODOMÉSTICOS" value="bestSellers" />
+        <Tab label="CÓMPUTO" value="topRated" />
       </Tabs>
       <Box
         margin="0 auto"
@@ -74,6 +74,7 @@ const ShoppingList = () => {
         justifyContent="space-around"
         rowGap="20px"
         columnGap="1.33%"
+        objectFit="cover"
       >
         {value === "all" &&
           items.map((item) => (
